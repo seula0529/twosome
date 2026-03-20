@@ -17,11 +17,12 @@
     <div class="header_inner">
       <h1 class="area_tit">
         <a href="#none">
-          <img src="./images/img_logo.png" alt="" class="img_logo">
+          <img src="./images/img_logo1.png" alt="" class="img_logo">
         </a>
       </h1>
       <button class="btn_gnb mobile" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
       <nav class="box_gnb">
+        <button class="btn_close"><i class="fa-solid fa-x"></i></button>
         <ul>
           <li><a href="/index.html" class="link_page">HOME</a></li>
           <li><a href="/intro.html" class="link_page">INTRO</a></li>
@@ -32,25 +33,26 @@
     </div>
   </header>
   <main>
+    <div id="top-sentinel"></div>
     <section class="section_visual">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./images/temp_visual1.jpg" alt="">
+            <img src="./images/img_visual1.jpg" alt="">
             <div class="wrap_txt">
               <strong class="tit_txt">너와 나, 우리의 <em>썸</em></strong>
               <p class="desc_txt">질문이 환영받는 우리만의 성장 공간</p>
             </div>
           </div>
           <div class="swiper-slide">
-            <img src="./images/temp_visual2.jpg" alt="">
+            <img src="./images/img_visual2.jpg" alt="">
             <div class="wrap_txt">
               <strong class="tit_txt">성장의 시작, 나만의 <em>썸</em></strong>
               <p class="desc_txt">나를 알아가는 것이 모든 변화의 출발점</p>
             </div>
           </div>
           <div class="swiper-slide">
-            <img src="./images/temp_visual3.jpg" alt="">
+            <img src="./images/img_visual3.jpg" alt="">
             <div class="wrap_txt">
               <strong class="tit_txt">나와 내 미래의 <em>썸</em></strong>
               <p class="desc_txt">내가 진짜 원하는 게 무엇인지 답을 찾는 시간</p>
@@ -64,50 +66,56 @@
     <div class="wrap_section">
       <section class="section_main1">
         <h2>CURRICULM</h2>
-        <ol>
-          <li>
-            <strong>1 week</strong>
-            <small class="subtit_txt">나의 이해</small>
-            <ul class="list_desc">
-              <li>OT</li>
-              <li>메타인지이해</li>
-              <li>특별한강의</li>
-            </ul>
-          </li>
-          <li>
-            <strong>2 week</strong>
-            <small class="subtit_txt">타인 이해 소통</small>
-            <ul class="list_desc">
-              <li>뇌과학강의</li>
-              <li>팀빌딩 프로그램</li>
-              <li>자기계발프로그램</li>
-            </ul>
-          </li>
-          <li>
-            <strong>3 week</strong>
-            <small class="subtit_txt">사회 속의 나</small>
-            <ul class="list_desc">
-              <li>역사특강</li>
-              <li>관점의 반전</li>
-              <li>포르탁파티</li>
-            </ul>
-          </li>
-          <li>
-            <strong>4 week</strong>
-            <small class="subtit_txt">문화 속의 나</small>
-            <ul class="list_desc">
-              <li>내면투자</li>
-              <li>고전의 이해</li>
-              <li>소통시간</li>
-            </ul>
-          </li>
-        </ol>
+        <div class="box_swiper">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <strong>1 WEEK</strong>
+                <small class="subtit_txt">나의 이해</small>
+                <ul class="list_desc">
+                  <li>OT</li>
+                  <li>메타인지이해</li>
+                  <li>특별한강의</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <strong>2 WEEK</strong>
+                <small class="subtit_txt">타인 이해 소통</small>
+                <ul class="list_desc">
+                  <li>뇌과학강의</li>
+                  <li>팀빌딩 프로그램</li>
+                  <li>자기계발프로그램</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <strong>3 WEEK</strong>
+                <small class="subtit_txt">사회 속의 나</small>
+                <ul class="list_desc">
+                  <li>역사특강</li>
+                  <li>관점의 반전</li>
+                  <li>포르탁파티</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <strong>4 WEEK</strong>
+                <small class="subtit_txt">문화 속의 나</small>
+                <ul class="list_desc">
+                  <li>내면투자</li>
+                  <li>고전의 이해</li>
+                  <li>소통시간</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="btn_prev"><i class="fa-solid fa-angle-left"></i></button>
+          <button class="btn_next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
         <a href="#none" class="link_more">더보기</a>
       </section>
       <section class="section_main2">
         <h2>REVIEW</h2>
-        <div class="swiper">
-          <div class="box_swiper">
+        <div class="box_swiper">
+          <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <strong class="tit_txt">"강의 한 편이 제 터닝 포인트가 됐어요!"</strong>
@@ -174,12 +182,15 @@
   </main>
   <footer class="footer">
     <button class="btn_top"><i class="fa-solid fa-arrow-up"></i></button>
-    <div>
-      <h2>CONTACT</h2>
-      <a href="mailto:twosome@gmail.com"><i class="fa-solid fa-envelope"></i>twosome@gmail.com</a>
-    </div>
-    <div>
-      &copy;2026 TWOSOME. All rights reserve
+    <div class="footer_inner">
+      <div>
+        <strong>CONTACT</strong>
+        <a href="mailto:twosome@gmail.com"><i class="fa-solid fa-envelope"></i>twosome@gmail.com</a>
+      </div>
+      <div>
+        <img src="./images/img_logo2.png" alt="" class="img_logo">
+        <p>&copy;2026 TWOSOME. All rights reserve</p>
+      </div>
     </div>
   </footer>
 </body>
