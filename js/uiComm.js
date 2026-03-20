@@ -32,6 +32,7 @@ const visualSwiper = new Swiper('.section_visual .swiper',{
 const reviewSwiper = new Swiper('.section_main2 .swiper',{
   loop: true,
   slidesPerView:1,
+  spaceBetween: 20,
   navigation :{
     prevEl: '.btn_prev',
     nextEl: '.btn_next'
