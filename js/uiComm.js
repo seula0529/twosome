@@ -218,6 +218,8 @@ const sponsorSwiper2 = new Swiper('.section_main4 .swiper.line2',{
 
 // 서브 페이지
     AOS.init({
-      duration: 800, // 애니메이션 지속 시간
-      once: true,    // 스크롤 올릴 때 다시 작동하지 않도록 설정 (선택 사항)
+      anchorPlacement: 'top-bottom', 
+      easing: 'ease-out-back', 
+      offset: 200, 
+      duration: 1200,
     });
