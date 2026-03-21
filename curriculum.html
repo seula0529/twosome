@@ -13,7 +13,7 @@
   <link type="text/css" rel="stylesheet" href="./css/comm.css">
 </head>
 
-<body>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
   <header class="header">
     <div class="header_inner">
       <h1 class="area_tit">
@@ -28,64 +28,68 @@
           <li><a href="./index.html" class="link_page">HOME</a></li>
           <li><a href="./intro.html" class="link_page">INTRO</a></li>
           <li><a href="./curriculum.html" class="link_page">CURRICULM</a></li>
-          <li><a href="./review.html" class="link_page">REVIEW</a></li>
+          <li><a href="./gallery.html" class="link_page">GALLERY</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="curriculum">
+  <main id="curriculum" >
     <div class="section_subvisual">
       <div class="visual_inner"></div>
     </div>
-    <div class="wrap_section curriculum">
+    <div class="wrap_section curriculum" >
       <section class="section_head" data-aos="fade-down" data-aos-duration="1500">
         <div class="section_inner">
-          <h2 class="tit_txt">4주, 나를 찾아가는 여정</h2>
+          <h2 class="tit_txt"><div class="img_deco1"></div>나를 찾아가는 여정<div class="img_deco2"></div></h2>
           <p class="desc_txt">투썸의 커리큘럼은 정해진 답을 주는 것이 아니라,<br>스스로 질문하고 답을 찾아가는 과정을 함께합니다.</p>
         </div>
       </section>
-      <section class="section_week1">
+      <section class="section_week1" data-aos="fade-up" data-aos-duration="1000">
         <div class="section_inner">
           <div class="box_img">
             <img src="./images/img_curri_week1.jpg" alt="">
           </div>
           <div class="box_txt">
-            <strong class="tit_txt">1WEEK</strong>
-            <p></p>
+            <h3 class="tit_txt">1WEEK</h3>
+            <strong class="subtit_txt">Understanding Myself<br>- Metacognition & Foundation</strong>
+            <p class="desc_txt">오리엔테이션을 통해 과정의 시작을 알리고, 메타인지 이해와 특별 강연을 통해 자신을 객관적으로 돌아보는 시간을 갖습니다.</p>
           </div>
         </div>
       </section>
-      <section class="section_week2">
+      <section class="section_week2" data-aos="fade-up" data-aos-duration="1000">
         <div class="section_inner">
           <div class="box_img">
             <img src="./images/img_curri_week2.jpg" alt="">
           </div>
           <div class="box_txt">
-            <strong class="tit_txt">2WEEK</strong>
-            <p></p>
+            <h3 class="tit_txt">2WEEK</h3>
+            <strong class="subtit_txt">Connecting with Others<br>- Neuroscience & Teamwork</strong>
+            <p class="desc_txt">뇌과학 강의를 통해 타인의 심리를 파악하고, 팀빌딩과 자기계발 프로그램을 통해 원활한 소통 능력을 배양합니다.</p>
           </div>
         </div>
       </section>
-      <section class="section_week3">
+      <section class="section_week3" data-aos="fade-up" data-aos-duration="1000">
         <div class="section_inner">
           <div class="box_img">
             <img src="./images/img_curri_week3.jpg" alt="">
           </div>
           <div class="box_txt">
-            <strong class="tit_txt">3WEEK</strong>
-            <p></p>
+            <h3 class="tit_txt">3WEEK</h3>
+            <strong class="subtit_txt">Me in Society<br>- Historical Insights & Perspective Shifts</strong>
+            <p class="desc_txt">역사 특강과 관점의 전환을 통해 사회 속 나의 위치를 재정의하며, 포트락 파티로 사회적 유대감을 실천적으로 경험합니다.</p>
           </div>
         </div>
       </section>
-      <section class="section_week4">
+      <section class="section_week4" data-aos="fade-up" data-aos-duration="1000">
         <div class="section_inner">
           <div class="box_img">
             <img src="./images/img_curri_week4.jpg" alt="">
           </div>
           <div class="box_txt">
-            <strong class="tit_txt">4WEEK</strong>
-            <p></p>
+            <h3 class="tit_txt">4WEEK</h3>
+            <strong class="subtit_txt">Deepening the Self<br>- Inner Investment & Classics</strong>
+            <p class="desc_txt">내면의 가치를 높이는 투자와 고전 학습을 통해 인문학적 소양을 깊게 다집니다. 또한, 구성원과의 소통 시간을 통해 개인의 통찰을 공동체의 문화적 관점으로 확장합니다.</p>
           </div>
         </div>
       </section>
@@ -109,6 +113,7 @@
 </body>
 <script src="./js/lib/swiper-11.1.3.min.js"></script>
 <script src="./js/lib/aos-2.3.1.min.js"></script>
+<script src="./js/lib/egjs-grid-1.19.0.min.js"></script>
 <script src="./js/uiComm.js"></script>
 
 </html>

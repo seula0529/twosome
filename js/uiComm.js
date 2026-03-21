@@ -216,10 +216,38 @@ const sponsorSwiper2 = new Swiper('.section_main4 .swiper.line2',{
   allowTouchMove: false,
 })
 
-// 서브 페이지
-    AOS.init({
-      anchorPlacement: 'top-bottom', 
-      easing: 'ease-out-back', 
-      offset: 200, 
-      duration: 1200,
+// 서브 페이지 공통
+AOS.init({
+  anchorPlacement: 'top-bottom', 
+  easing: 'ease-out-back', 
+  offset: 200, 
+  duration: 1200,
+});
+
+// 갤러리 masonly-grid
+const container = document.querySelector(".list_gallery");
+  if(container){
+    const grid = new Grid.MasonryGrid(container, {
+      gap: 16,
+      align: "justify",
+      column: 2,
+      useResizeObserver: true, 
+      resizeDebounce: 50
     });
+    
+    function updateGridOption(){
+      const winWidth = window.innerWidth;
+      if(winWidth < 1200){
+        grid.gap = 16;
+        grid.column = 2;
+      }else{
+        grid.gap = 30;
+        grid.column = 3;
+      }
+      grid.renderItems();
+    }
+    window.addEventListener("resize", updateGridOption);
+    window.addEventListener("load", updateGridOption);
+  
+    updateGridOption();
+  }
