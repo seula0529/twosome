@@ -170,8 +170,9 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 .intro [class*=section_] .subtit_txt{font-size:18px;}
 .intro [class*=section_] .desc_txt{font-size:16px;}
 @media screen and (min-width:768px) {
-  .intro .section_inner{flex-direction:row;gap:40px;align-items: center;}
+  .intro .section_inner{gap:20px;align-items: center;}
   .intro [class*=section_]{padding:40px 0}
+  .intro [class*=section_] .box_head{align-self: flex-start;}
 }
 @media screen and (min-width:1200px) {
   .intro [class*=section_]{padding:50px 0}
@@ -199,7 +200,7 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 
 /* intro - section_features */
 .intro .section_features h2 em{color:#66383C;}
-.intro .section_features .list_feature {display: flex;flex-direction: column;gap: 20px;margin-top: 40px;}
+.intro .section_features .list_feature {display: flex;flex-direction: column;gap: 20px;margin-top: 20px;}
 .intro .section_features .list_feature li {padding: 30px;border: 1px solid #eee;border-radius: 15px;background: #fff;transition: all 0.3s ease;}
 .intro .section_features .list_feature li:hover {transform: translateY(-10px);}
 .intro .section_features .icon {font-size: 40px;margin-bottom: 15px;}
