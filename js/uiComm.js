@@ -165,14 +165,14 @@ const curriSwiper = new Swiper('.section_main1 .swiper',{
   },
 })
 
-// section_main2 REVIEW Swiper
-const reviewSwiper = new Swiper('.section_main2 .swiper',{
+// section_main3 REVIEW Swiper
+const reviewSwiper = new Swiper('.section_main3 .swiper',{
   loop: true,
   slidesPerView:1,
   spaceBetween: 20,
   navigation :{
-    prevEl: '.section_main2 .btn_prev',
-    nextEl: '.section_main2 .btn_next'
+    prevEl: '.section_main3 .btn_prev',
+    nextEl: '.section_main3 .btn_next'
   },
   spaceBetween: 20, 
   breakpoints: {
@@ -183,8 +183,8 @@ const reviewSwiper = new Swiper('.section_main2 .swiper',{
   },
 })
 
-// section_main3 SPONSOR Swiper
-const sponsorSwiper1 = new Swiper('.section_main3 .swiper.line1',{
+// section_main4 SPONSOR Swiper
+const sponsorSwiper1 = new Swiper('.section_main4 .swiper.line1',{
   loop: true,               
   slidesPerView: 'auto',   
   freemode: true,          
@@ -199,7 +199,7 @@ const sponsorSwiper1 = new Swiper('.section_main3 .swiper.line1',{
   loopAdditionalSlides: 5,
   allowTouchMove: false,
 })
-const sponsorSwiper2 = new Swiper('.section_main3 .swiper.line2',{
+const sponsorSwiper2 = new Swiper('.section_main4 .swiper.line2',{
   loop: true,               
   slidesPerView: 'auto',   
   freemode: true,          
@@ -215,3 +215,9 @@ const sponsorSwiper2 = new Swiper('.section_main3 .swiper.line2',{
   loopAdditionalSlides: 5,
   allowTouchMove: false,
 })
+
+// 서브 페이지
+    AOS.init({
+      duration: 800, // 애니메이션 지속 시간
+      once: true,    // 스크롤 올릴 때 다시 작동하지 않도록 설정 (선택 사항)
+    });
