@@ -159,7 +159,7 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 
 /* subpage 공통 */
 .section_subvisual {position: relative;width: 100%;height: 40vh; background-repeat: no-repeat;background-position: center;background-size: cover; display: flex;align-items: center;justify-content: center;}
-#intro .section_subvisual {background-image: urlgit ('../images/temp_visual1.jpg'); }
+#intro .section_subvisual {background-image: url('../images/temp_visual1.jpg'); }
 #curriculum .section_subvisual {background-image: url('../images/temp_visual2.jpg'); }
 #gallery .section_subvisual {background-image: url('../images/temp_visual3.jpg'); }
 @media screen and (min-width:1200px){
