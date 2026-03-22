@@ -80,7 +80,7 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 .section_visual{height:300px;}
 .section_visual .swiper{height:100%}
 .section_visual .swiper-slide{height:100%}
-.section_visual .swiper-slide img{width:100%;height:100%;object-fit:cover;object-position:bottom center;}
+.section_visual .swiper-slide img{width:100%;height:100%;object-fit:cover;object-position: center;}
 .section_visual .swiper-slide .wrap_txt{flex-direction:column;justify-content:center;align-items:center;display:flex;position:absolute;height:100%;padding:0 55px;background-color: rgba(15,23,42,0.4);inset:0;pointer-events: none;}
 .section_visual .swiper-slide .tit_txt{font-size:36px;font-weight:700;line-height:1.3;color:#fff;text-align:center;font-family:'SBAggro','Pretendard';}
 .section_visual .swiper-slide .tit_txt em{font-weight:inherit;color:#E86208;}
@@ -105,19 +105,17 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 .section_main1 .swiper-slide{padding:20px;border:1px solid #aaa;border-radius:10px;}
 .section_main1 .swiper-slide strong{display:inline-block;margin-bottom: 20px;font-size:20px;font-weight:700;line-height:1.4;color:#111;}
 .section_main1 .swiper-slide .subtit_txt{display: inline-block;margin-left:6px;font-size:14px;font-weight:400;line-height:1.5;color:#aaa;}
-.section_main1 .list_desc{flex-direction: column;display: flex;gap:6px;}
-.section_main1 .list_desc li{position:relative;padding-left:20px;font-size: 16px;font-weight:500;line-height: 1.6;color:#111;}
-.section_main1 .list_desc li::before{position:absolute;top:50%;left:0;font-family:'Font Awesome 7 Free';font-size:12px;font-weight:800;color:#E86208;transform:translateY(-50%);content:"\f00c";}
+.section_main1 .swiper-slide .desc_txt{font-size: 16px;font-weight:500;line-height: 1.6;color:#111;}
 .section_main1 .link_more{color:#fff;background-color:#E86208;}
 @media screen and (min-width:768px) {
   .section_main1 .swiper-slide{padding:30px;}
   .section_main1 .swiper-slide strong{margin-bottom: 24px;font-size:22px;line-height:1.4;}
-  .section_main1 .list_desc li{font-size:16px;line-height: 1.5;}
+  .section_main1 .swiper-slide .desc_txt{font-size:16px;line-height: 1.5;}
 }
 @media screen and (min-width:1200px) {
   .section_main1 .swiper-slide strong{margin-bottom: 26px;font-size:24px;line-height:1.5;}
   .section_main1 .swiper-slide .subtit_txt{font-size:16px;}
-  .section_main1 .list_desc li{font-size:18px;}
+  .section_main1 .swiper-slide .desc_txt{font-size:18px;}
 }
 
 /* section_main2 */
