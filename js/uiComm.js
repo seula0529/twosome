@@ -136,24 +136,27 @@ if (btnTop) {
 
 // 모달 신청서 전화번호 유효성
 const telInput = document.getElementById('tel');
-telInput.addEventListener('input', (e) => {
-  let value = e.target.value.replace(/[^0-9]/g, ''); // 숫자만 남기기
-  let result = '';
+if(!telInput){
 
-  if (value.length < 4) {
-    result = value;
-  } else if (value.length < 7) {
-    result = value.substr(0, 3) + '-' + value.substr(3);
-  } else if (value.length < 11) {
-    result = value.substr(0, 3) + '-' + value.substr(3, 3) + '-' + value.substr(6);
-  } else {
-    result = value.substr(0, 3) + '-' + value.substr(3, 4) + '-' + value.substr(7);
-  }
+  telInput.addEventListener('input', (e) => {
+    let value = e.target.value.replace(/[^0-9]/g, ''); // 숫자만 남기기
+    let result = '';
+  
+    if (value.length < 4) {
+      result = value;
+    } else if (value.length < 7) {
+      result = value.substr(0, 3) + '-' + value.substr(3);
+    } else if (value.length < 11) {
+      result = value.substr(0, 3) + '-' + value.substr(3, 3) + '-' + value.substr(6);
+    } else {
+      result = value.substr(0, 3) + '-' + value.substr(3, 4) + '-' + value.substr(7);
+    }
+  
+    e.target.value = result;
+  });
+}
 
-  e.target.value = result;
-});
-
-// 모달 - 신청서 작성
+// 신청서 작성
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzP-uuqNeY9D-j4wSWIOPIVAH-6d-PlukqPLGMSp1ZhRhMPUGo5NGuR_0jBh3QhQuux2g/exec';
 const form = document.querySelector('#inquiryForm');
 
