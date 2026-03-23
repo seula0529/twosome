@@ -52,6 +52,44 @@ if (btnMenu && boxGnb) {
   });
 }
 
+// contact us - 모달
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.querySelector('.modal_overlay');
+  
+  // 1. 모달 열기 버튼들 처리
+  const openBtn = modal.querySelector('.btn_modal');
+  openBtn.addEventListener('click', openContactModal);
+
+  // 2. 모달 닫기 기능 (딤드 부분 + X 버튼)
+  if (modal) {
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        closeContactModal();
+      }
+    });
+
+    // X 버튼 클릭 시 닫기
+    const closeBtn = modal.querySelector('.btn_close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeContactModal);
+    }
+  }
+
+  // --- 핵심 함수들 ---
+
+  function openContactModal() {
+    if (!modal) return;
+    modal.classList.add('is-active'); // CSS 클래스 추가로 열기 + 애니메이션
+    document.body.style.overflow = 'hidden'; // 뒷배경 스크롤 방지 (이건 직접 주는 게 확실합니다)
+  }
+
+  function closeContactModal() {
+    if (!modal) return;
+    modal.classList.remove('is-active'); // CSS 클래스 제거로 닫기
+    document.body.style.overflow = 'auto'; // 스크롤 복구
+  }
+});
+
 // 맨위로가기 버튼
 const btnTop = document.querySelector('.footer .btn_top');
 

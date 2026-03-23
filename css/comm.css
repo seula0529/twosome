@@ -36,6 +36,8 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 .footer strong{display:inline-block;font-size:24px;font-weight:600;line-height:1.4;}
 .footer a{display:block;margin-top:8px;color:inherit}
 .footer a i{margin-right:4px;}
+.footer button{display:inline-block;margin-top:8px;color:inherit}
+.footer button i{margin-right:4px;}
 .footer .img_logo{display:block;width:100px;height:auto;opacity: 0.7;}
 .btn_top {position: fixed;right: 20px;bottom: 20px;z-index: 1000;width:45px;height:45px;border-radius:100px;font-size:16px;color:#fff;background: linear-gradient(135deg,rgba(232, 98, 8, 0.95),rgba(26, 43, 76, 0.95));opacity: 0;visibility: hidden;transform: translateY(20px);transition: opacity 0.3s, transform 0.3s, visibility 0.3s;}
 .btn_top.on {opacity: 1;visibility: visible;transform: translateY(0);pointer-events: auto;}
@@ -44,6 +46,11 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
   .footer_inner{flex-direction:row;align-items:center;max-width:1000px;margin:0 auto;}
   .footer .img_logo{margin-left:auto}
 }
+
+.modal_overlay {display: none; position: fixed;top: 0; left: 0;width: 100%; height: 100%;background: rgba(0, 0, 0, 0.7);z-index: 9999;justify-content: center;align-items: center;opacity: 0;transition: opacity 0.3s ease;}
+.modal_overlay.is-active {display: flex;opacity: 1;}
+.modal_content {position: relative;padding: 30px;border-radius: 10px;width: 90%;max-width: 400px;background: #fff;transform: translateY(50px); transition: transform 0.4s ease-out;}
+.modal_overlay.is-active .modal_content{transform: translateY(0);}
 
 /* 메인 내부 공통 */
 .wrap_section{padding:0 15px;margin:15px auto;}
