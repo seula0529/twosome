@@ -264,7 +264,8 @@ window.addEventListener('load', function() {
   AOS.init({
     anchorPlacement: 'top-bottom', 
     easing: 'ease-out-back', 
-    offset: 200, 
+    once:'true',
+    offset: 100, 
     duration: 1200,
   });
 });
