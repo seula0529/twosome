@@ -165,9 +165,9 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 #intro .section_subvisual {background-image: url('../images/temp_visual1.jpg'); }
 #curriculum .section_subvisual {background-image: url('../images/temp_visual2.jpg'); }
 #gallery .section_subvisual {background-image: url('../images/temp_visual3.jpg'); }
-[data-aos] {pointer-events: auto !important;opacity: 1 !important;transform: none !important;}
+/* [data-aos] {pointer-events: auto !important;opacity: 1 !important;transform: none !important;}
 .aos-init[data-aos] {opacity: 0;}
-.aos-init.aos-animate[data-aos] {opacity: 1;transform: none;}
+.aos-init.aos-animate[data-aos] {opacity: 1;transform: none;} */
 @media screen and (min-width:1200px){
   .section_subvisual{height:55vh;background-attachment: fixed;}
 }
@@ -333,8 +333,9 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 }
 
 /* 신청서 페이지 */
-.section_apply .tit_txt{margin-bottom:15px;font-size:22px;font-weight:700;line-height:1.1;font-family:'SBAggro', 'Pretendard';letter-spacing:-2px;}
-.section_apply dl{display:grid;grid-template-columns: auto 1fr;gap:10px 15px;align-items:center;width:100%;margin-bottom:12px;}
+.section_apply{width:100%;max-width:800px;margin:0 auto;}
+.section_apply .tit_txt{margin-bottom:15px;font-size:22px;font-weight:700;line-height:1.1;font-family:'SBAggro', 'Pretendard';letter-spacing:-2px;color:#E86208}
+.section_apply dl{display:grid;grid-template-columns: auto 1fr;gap:15px 20px;align-items:center;width:100%;margin-bottom:12px;}
 .section_apply label{font-size:14px;font-weight:500;line-height:1.4;color:#111;}
 .section_apply .wrap_input{border: 1px solid #111;border-radius: 10px;}
 .section_apply input, .section_apply textarea{width:100%;padding:6px 10px;;border:0;border-radius:inherit;outline: none;}
