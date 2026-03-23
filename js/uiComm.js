@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const modal = document.querySelector('.modal_overlay');
   
   // 1. 모달 열기 버튼들 처리
-  const openBtn = modal.querySelector('.btn_modal');
+  const openBtn = document.querySelector('.btn_modal');
   openBtn.addEventListener('click', openContactModal);
 
   // 2. 모달 닫기 기능 (딤드 부분 + X 버튼)
@@ -74,8 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
       closeBtn.addEventListener('click', closeContactModal);
     }
   }
-
-  // --- 핵심 함수들 ---
 
   function openContactModal() {
     if (!modal) return;
@@ -172,6 +170,44 @@ if (btnTop) {
   handleBtnTopScroll();
 }
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycby_c1KEYowIZP5cAKdgkxHL-cZ9nTN3DYhvwp4Z64BoRk9ZwIXe9SCqvL9DIx6KCauW9Q/exec';
+const form = document.querySelector('#inquiryForm');
+const modal = document.querySelector('#contactModal');
+
+form.addEventListener('submit', e => {
+  e.preventDefault(); // 기본 제출 동작 방지
+  
+  // 버튼 로딩 처리 (중복 클릭 방지)
+  const submitBtn = form.querySelector('.btn_submit');
+  submitBtn.disabled = true;
+  submitBtn.innerText = '신청 중...';
+
+  // fetch를 사용하여 구글 시트로 전송
+  fetch(scriptURL, { 
+    method: 'POST', 
+    body: new FormData(form)
+  })
+  .then(response => {
+    alert('프로그램 참여 신청이 완료되었습니다!');
+    form.reset(); // 폼 초기화
+    modal.classList.remove('is-active'); // 모달 닫기 (클래스명은 환경에 맞춰 수정)
+  })
+  .catch(error => {
+    alert('오류가 발생했습니다. 다시 시도해주세요.');
+    console.error('Error!', error.message);
+  })
+  .finally(() => {
+    // 버튼 상태 복구
+    submitBtn.disabled = false;
+    submitBtn.innerText = '신청하기';
+  });
+});
+
+// 닫기 버튼 로직 (추가)
+document.querySelector('.btn_close').addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
 
 // 메인 페이지
 // section_visual Swiper
@@ -222,26 +258,14 @@ const reviewSwiper = new Swiper('.section_main3 .swiper',{
 })
 
 // section_main4 SPONSOR Swiper
-const sponsorSwiper1 = new Swiper('.section_main4 .swiper.line1',{
+const sponsorSwiper = new Swiper('.section_main4 .swiper',{
   loop: true,               
   slidesPerView: 'auto',   
-  freemode: true,          
-  speed: 4000,             
-  allowTouchMove: false,   
-  autoplay: {
-    delay: 0,               
-    disableOnInteraction: false,
+  freeMode: {
+    enables:true,          
+    momemtum:false
   },
-  spaceBetween: 20,
-  freeMode: true,
-  loopAdditionalSlides: 5,
-  allowTouchMove: false,
-})
-const sponsorSwiper2 = new Swiper('.section_main4 .swiper.line2',{
-  loop: true,               
-  slidesPerView: 'auto',   
-  freemode: true,          
-  speed: 4000,             
+  speed: 7000,             
   allowTouchMove: false,   
   autoplay: {
     delay: 0,               

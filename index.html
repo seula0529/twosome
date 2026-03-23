@@ -153,7 +153,7 @@
       </section>
       <section class="section_main4">
         <h2>SPONSOR</h2>
-        <div class="swiper line1">
+        <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">KGM모터스</div>
             <div class="swiper-slide">CS사무기</div>
@@ -161,10 +161,6 @@
             <div class="swiper-slide">최강상사</div>
             <div class="swiper-slide">(협)느티나무</div>
             <div class="swiper-slide">(주)두성건설</div>
-          </div>
-        </div>
-        <div class="swiper line2">
-          <div class="swiper-wrapper">
             <div class="swiper-slide">(주)삼다인</div>
             <div class="swiper-slide">지니원</div>
             <div class="swiper-slide">c.s사무기</div>
@@ -182,8 +178,8 @@
     <div class="footer_inner">
       <div>
         <strong>CONTACT</strong>
-        <a href="mailto:twosome@gmail.com"><i class="fa-solid fa-envelope"></i>twosome@gmail.com</a>
-        <button class="btn_modal"><i class="fa-solid fa-paper-plane"></i>간편 문의하기</button>
+        <a href="mailto:twosome.edu@gmail.com"><i class="fa-solid fa-envelope"></i>twosome.edu@gmail.com</a>
+        <button class="btn_modal"><i class="fa-solid fa-file-signature"></i>투썸과 함께하기</button>
       </div>
       <div>
         <img src="./images/img_logo2.png" alt="" class="img_logo">
@@ -191,6 +187,26 @@
       </div>
     </div>
   </footer>
+
+  <div id="contactModal" class="modal_overlay">
+    <div class="modal_content">
+      <h3 class="tit_txt">프로그램 참여 신청</h3>
+      <form id="inquiryForm">
+        <dl>
+          <dt><label for="name">이름</label></dt>
+          <dd><div class="wrap_input"><input type="text" id="name" name="name" placeholder="김00" required></div></dd>
+          <dt><label for="email">이메일</label></dt>
+          <dd><div class="wrap_input"><input type="email" id="email" name="email" placeholder="twosome@twosome.com" required></div></dd>
+          <dt><label for="tel">전화번호</label></dt>
+          <dd><div class="wrap_input"><input type="tel" id="tel" name="tel" placeholder="010-0000-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="13"></div></dd>
+          <dt><label for="content">참여목적</label></dt>
+          <dd><div class="wrap_input"><textarea id="content" name="content" placeholder="신청하게 된 동기나 목적을 간단히 적어주세요"></textarea></div></dd>
+        </dl>
+        <button type="submit" class="btn_submit">신청하기</button>
+      </form>
+      <button class="btn_close"><i class="fa-solid fa-x"></i></button>
+    </div>
+  </div>
 </body>
 <script src="./js/lib/swiper-11.1.3.min.js"></script>
 <script src="./js/lib/aos-2.3.1.min.js"></script>
