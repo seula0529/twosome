@@ -160,7 +160,7 @@ if(telInput){
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzP-uuqNeY9D-j4wSWIOPIVAH-6d-PlukqPLGMSp1ZhRhMPUGo5NGuR_0jBh3QhQuux2g/exec';
 const form = document.querySelector('#inquiryForm');
 
-form.addEventListener('submit', e => {
+if(form){form.addEventListener('submit', e => {
   e.preventDefault(); // 기본 제출 동작 방지
   
   // 버튼 로딩 처리 (중복 클릭 방지)
@@ -187,7 +187,7 @@ form.addEventListener('submit', e => {
     submitBtn.disabled = false;
     submitBtn.innerText = '신청하기';
   });
-});
+});}
 
 
 // 메인 페이지
