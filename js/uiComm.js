@@ -136,7 +136,7 @@ if (btnTop) {
 
 // 모달 신청서 전화번호 유효성
 const telInput = document.getElementById('tel');
-if(!telInput){
+if(telInput){
 
   telInput.addEventListener('input', (e) => {
     let value = e.target.value.replace(/[^0-9]/g, ''); // 숫자만 남기기
