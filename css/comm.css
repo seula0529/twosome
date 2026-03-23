@@ -165,6 +165,9 @@ body:has(.btn_gnb[aria-expanded="true"])::before { opacity: 1; visibility: visib
 #intro .section_subvisual {background-image: url('../images/temp_visual1.jpg'); }
 #curriculum .section_subvisual {background-image: url('../images/temp_visual2.jpg'); }
 #gallery .section_subvisual {background-image: url('../images/temp_visual3.jpg'); }
+[data-aos] {pointer-events: auto !important;opacity: 1 !important;transform: none !important;}
+.aos-init[data-aos] {opacity: 0;}
+.aos-init.aos-animate[data-aos] {opacity: 1;transform: none;}
 @media screen and (min-width:1200px){
   .section_subvisual{height:55vh;background-attachment: fixed;}
 }

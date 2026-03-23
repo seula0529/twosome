@@ -293,13 +293,14 @@ const sponsorSwiper = new Swiper('.section_main4 .swiper',{
 })
 
 // 서브 페이지 공통
-AOS.init({
-  anchorPlacement: 'top-bottom', 
-  easing: 'ease-out-back', 
-  offset: 200, 
-  duration: 1200,
+window.addEventListener('load', function() {
+  AOS.init({
+    anchorPlacement: 'top-bottom', 
+    easing: 'ease-out-back', 
+    offset: 200, 
+    duration: 1200,
+  });
 });
-
 // 갤러리 masonly-grid
 const container = document.querySelector(".list_gallery");
   if(container){
