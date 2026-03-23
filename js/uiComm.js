@@ -192,7 +192,6 @@ telInput.addEventListener('input', (e) => {
 // 모달 - 신청서 작성
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzP-uuqNeY9D-j4wSWIOPIVAH-6d-PlukqPLGMSp1ZhRhMPUGo5NGuR_0jBh3QhQuux2g/exec';
 const form = document.querySelector('#inquiryForm');
-const modal = document.querySelector('#contactModal');
 
 form.addEventListener('submit', e => {
   e.preventDefault(); // 기본 제출 동작 방지
@@ -221,11 +220,6 @@ form.addEventListener('submit', e => {
     submitBtn.disabled = false;
     submitBtn.innerText = '신청하기';
   });
-});
-
-// 닫기 버튼 로직 (추가)
-document.querySelector('.btn_close').addEventListener('click', () => {
-  modal.classList.remove('active');
 });
 
 
