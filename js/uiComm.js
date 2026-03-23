@@ -190,7 +190,7 @@ telInput.addEventListener('input', (e) => {
 });
 
 // 모달 - 신청서 작성
-const scriptURL = 'https://script.google.com/macros/s/AKfycby_c1KEYowIZP5cAKdgkxHL-cZ9nTN3DYhvwp4Z64BoRk9ZwIXe9SCqvL9DIx6KCauW9Q/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzP-uuqNeY9D-j4wSWIOPIVAH-6d-PlukqPLGMSp1ZhRhMPUGo5NGuR_0jBh3QhQuux2g/exec';
 const form = document.querySelector('#inquiryForm');
 const modal = document.querySelector('#contactModal');
 
